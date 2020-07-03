@@ -13,6 +13,8 @@ public class Shoes {
     @Id
     private String id;
     @Column(insertable = false, updatable = false)
+
+    private int status;
     private Date createTime;
 
 
@@ -32,12 +34,21 @@ public class Shoes {
         return createTime;
     }
 
+    public int getStatus() {
+        return status;
+    }
+
+    public void setStatus(int status) {
+        this.status = status;
+    }
+
 
     @Override
     public String toString() {
         return "Shoes{" +
                 "sequence=" + sequence +
                 ", id='" + id + '\'' +
+                ", status=" + status +
                 ", createTime=" + createTime +
                 '}';
     }

@@ -14,6 +14,9 @@ public class Box {
     private long sequence;
     @Id
     private String id;
+
+    private int status;
+
     @Column(insertable = false, updatable = false)
     private Date createTime;
 
@@ -35,11 +38,21 @@ public class Box {
     }
 
 
+    public int getStatus() {
+        return status;
+    }
+
+    public void setStatus(int status) {
+        this.status = status;
+    }
+
+
     @Override
     public String toString() {
         return "Box{" +
                 "sequence=" + sequence +
                 ", id='" + id + '\'' +
+                ", status=" + status +
                 ", createTime=" + createTime +
                 '}';
     }

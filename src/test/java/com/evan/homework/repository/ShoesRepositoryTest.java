@@ -8,6 +8,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
+import java.util.Optional;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 @SpringBootTest
@@ -29,6 +31,19 @@ class ShoesRepositoryTest {
     void select() {
         System.out.println(shoesRepository.findAll().toString());
 
+    }
+
+    @Test
+    void update(){
+
+        Optional<Shoes> optional = shoesRepository.findById("zzz");
+
+        if (optional.isPresent()){
+
+            Shoes shoes = optional.get();
+            shoes.setStatus(1);
+            shoesRepository.save(shoes);
+        }
     }
 
 }
