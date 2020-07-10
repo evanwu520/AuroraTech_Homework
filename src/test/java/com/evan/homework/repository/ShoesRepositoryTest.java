@@ -34,6 +34,10 @@ class ShoesRepositoryTest {
         log.info(shoesRepository.findAll().toString());
 
     }
+    @Test
+    void findUnCombineShoes(){
+        log.info(shoesRepository.findUnCombineShoes().toString());
+    }
 
     @Test
     void update(){

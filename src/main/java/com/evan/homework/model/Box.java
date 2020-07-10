@@ -27,5 +27,5 @@ public class Box {
     @Column(insertable = false, updatable = false)
     @Setter(AccessLevel.NONE)
     private Date createTime;
-    
+
 }

@@ -23,6 +23,7 @@ public class Shoes {
 
     private int status;
     @Setter(AccessLevel.NONE)
+    @Column(insertable = false, updatable = false)
     private Date createTime;
 
 }

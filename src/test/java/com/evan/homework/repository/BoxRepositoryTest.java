@@ -33,6 +33,11 @@ class BoxRepositoryTest {
     }
 
     @Test
+    void findUnCombineBox(){
+        log.info(boxRepository.findUnCombineBox().toString());
+    }
+
+    @Test
     void update(){
 
         Optional<Box> optional = boxRepository.findById("adfasdf");
