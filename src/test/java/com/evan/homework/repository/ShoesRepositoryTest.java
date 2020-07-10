@@ -2,6 +2,7 @@ package com.evan.homework.repository;
 
 import com.evan.homework.model.Box;
 import com.evan.homework.model.Shoes;
+import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,6 +14,7 @@ import java.util.Optional;
 import static org.junit.jupiter.api.Assertions.*;
 
 @SpringBootTest
+@Slf4j
 class ShoesRepositoryTest {
 
     @Autowired
@@ -29,7 +31,7 @@ class ShoesRepositoryTest {
 
     @Test
     void select() {
-        System.out.println(shoesRepository.findAll().toString());
+        log.info(shoesRepository.findAll().toString());
 
     }
 

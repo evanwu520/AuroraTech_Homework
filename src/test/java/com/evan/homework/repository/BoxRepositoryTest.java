@@ -1,6 +1,8 @@
 package com.evan.homework.repository;
 
 import com.evan.homework.model.Box;
+import lombok.extern.java.Log;
+import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,6 +13,7 @@ import java.util.Optional;
 
 
 @SpringBootTest
+@Slf4j
 class BoxRepositoryTest {
 
     @Autowired
@@ -26,8 +29,7 @@ class BoxRepositoryTest {
 
     @Test
     void select() {
-        System.out.println(boxRepository.findAll().toString());
-
+        log.info(boxRepository.findAll().toString());
     }
 
     @Test
