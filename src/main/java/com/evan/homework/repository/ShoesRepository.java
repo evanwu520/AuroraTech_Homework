@@ -15,4 +15,8 @@ public interface ShoesRepository extends PagingAndSortingRepository<Shoes, Strin
 
     @Query(value= "select  * from  shoes  where status = 0 order by sequence limit 1 ",  nativeQuery = true)
     Optional<Shoes> findUnCombineShoes();
+
+
+    @Query(value= "select  max(sequence) from  shoes",  nativeQuery = true)
+    Optional<Long> findShoesMaxSeq();
 }

@@ -40,6 +40,11 @@ class ShoesRepositoryTest {
     }
 
     @Test
+    void findShoesMaxSeq(){
+        log.info(shoesRepository.findShoesMaxSeq().toString());
+    }
+
+    @Test
     void update(){
 
         Optional<Shoes> optional = shoesRepository.findById("zzz");

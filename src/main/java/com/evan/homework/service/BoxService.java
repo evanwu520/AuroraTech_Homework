@@ -1,16 +1,16 @@
-package com.evan.homework.facotry.work;
+package com.evan.homework.service;
 
+import com.evan.homework.facotry.work.BoxWork;
 import com.evan.homework.repository.BoxRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.joda.time.LocalDate;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Bean;
-import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
 @Slf4j
-@Component
-public class BoxWork implements Work {
+@Service
+public class BoxService {
+
 
     @Autowired
     BoxRepository boxRepository;
@@ -18,11 +18,8 @@ public class BoxWork implements Work {
 
     private final String key = "abc";
 
-    @Override
-    public void produce() {
-
-
-        try{
+    public void produce(){
+        try {
             long seq = boxRepository.findBoxMaxSeq().get().longValue() + 1;
 
 
@@ -39,8 +36,7 @@ public class BoxWork implements Work {
             log.info("{}", id);
 
         }catch (Exception ex){
-           log.error("{}", ex);
+            log.error("{}", ex);
         }
-
     }
 }

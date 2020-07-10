@@ -16,5 +16,7 @@ public interface BoxRepository extends PagingAndSortingRepository<Box, String> {
     Optional<Box> findUnCombineBox();
 
 
+    @Query(value= "select  max(sequence) from  box",  nativeQuery = true)
+    Optional<Long> findBoxMaxSeq();
 
 }

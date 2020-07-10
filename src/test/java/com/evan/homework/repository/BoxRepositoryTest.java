@@ -38,6 +38,11 @@ class BoxRepositoryTest {
     }
 
     @Test
+    void findBoxMaxSeq(){
+        log.info(boxRepository.findBoxMaxSeq().toString());
+    }
+
+    @Test
     void update(){
 
         Optional<Box> optional = boxRepository.findById("adfasdf");
