@@ -1,5 +1,6 @@
 package com.evan.homework.model;
 
+import io.swagger.annotations.ApiModel;
 import lombok.AccessLevel;
 import lombok.Data;
 import lombok.Setter;
@@ -11,6 +12,7 @@ import java.util.Date;
 
 @Data
 @Entity
+@ApiModel
 public class Shoes {
 
     @Column(insertable = false, updatable = false)

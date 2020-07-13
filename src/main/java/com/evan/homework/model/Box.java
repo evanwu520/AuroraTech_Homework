@@ -1,5 +1,6 @@
 package com.evan.homework.model;
 
+import io.swagger.annotations.ApiModel;
 import lombok.AccessLevel;
 import lombok.Data;
 import lombok.Setter;
@@ -14,6 +15,7 @@ import java.util.Date;
 
 @Entity
 @Data
+@ApiModel
 public class Box {
 
     @Column(insertable = false, updatable = false)

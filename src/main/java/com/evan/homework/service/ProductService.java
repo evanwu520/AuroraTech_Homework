@@ -1,14 +1,14 @@
 package com.evan.homework.service;
 
-import com.evan.homework.model.Box;
+import com.evan.homework.model.Product;
 import jdk.nashorn.internal.runtime.options.Option;
 
 import java.util.List;
 
+public interface ProductService {
 
-public interface BoxService {
 
-    List<Box> getBoxList();
+    List<Product> getProductList();
 
 
 }

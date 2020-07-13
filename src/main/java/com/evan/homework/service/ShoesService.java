@@ -1,14 +1,15 @@
 package com.evan.homework.service;
 
-import com.evan.homework.model.Box;
+import com.evan.homework.model.Shoes;
 import jdk.nashorn.internal.runtime.options.Option;
+
 
 import java.util.List;
 
 
-public interface BoxService {
+public interface ShoesService {
 
-    List<Box> getBoxList();
 
+    List<Shoes> getShoesList();
 
 }
