@@ -19,7 +19,6 @@ public class Shoes {
 
     @Id
     private String id;
-    @Column(insertable = false, updatable = false)
 
     private int status;
     @Setter(AccessLevel.NONE)

@@ -1,12 +1,20 @@
 package com.evan.homework.facotry;
 
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+@Component
 public class FactoryProducer {
+
+    @Autowired
+    SimpleFactory simpleFactory;
 
 
     public AbstractFactory getFactory(String name){
 
         if (name.equals(SimpleFactory.name)) {
-            return new SimpleFactory();
+            return simpleFactory;
         }
         return null;
 

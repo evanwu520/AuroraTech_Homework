@@ -5,6 +5,7 @@ import com.evan.homework.facotry.work.CombineWork;
 import com.evan.homework.facotry.work.ShoesWork;
 import com.evan.homework.facotry.work.Work;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
 @Component
@@ -15,6 +16,12 @@ public class SimpleFactory  extends  AbstractFactory{
     @Autowired
     BoxWork boxWork;
 
+    @Autowired
+    ShoesWork shoesWork;
+
+    @Autowired
+    CombineWork combineWork;
+
 
 
     @Override
@@ -22,13 +29,13 @@ public class SimpleFactory  extends  AbstractFactory{
         return boxWork;
     }
 
-//    @Override
-//    Work getShoes() {
-//        return new ShoesWork();
-//    }
-//
-//    @Override
-//    Work getCombine() {
-//        return new CombineWork();
-//    }
+    @Override
+    public Work getShoes() {
+        return shoesWork;
+    }
+
+    @Override
+    public Work getCombine() {
+        return combineWork;
+    }
 }

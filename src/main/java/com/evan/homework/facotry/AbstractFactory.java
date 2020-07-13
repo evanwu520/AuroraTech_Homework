@@ -5,7 +5,10 @@ import com.evan.homework.facotry.work.Work;
 
 public abstract  class AbstractFactory {
 
-    abstract  Work getBox();
-//    abstract Work getShoes();
-//    abstract Work getCombine();
+    public abstract Work getBox();
+    public abstract Work getShoes();
+    public abstract Work getCombine();
+
+
+
 }
